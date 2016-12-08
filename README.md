@@ -1,17 +1,18 @@
-# [Roland CPC Emulator&nbsp;&nbsp;<br><br>![](https://github.com/raldus/roland/blob/master/assets/img/ready.png)](https://www.rolandemu.de/index.html)
+# [ ![Roland](https://www.rolandemu.de/files/images/rolandemu.de/css/roland.png) <br>CPC Emulator](https://www.rolandemu.de/index.html) 
 
 ## Overview
-Roland is an Emulator of the homecomputers Amstrad/Schneider from the series CPC 464/664/6128
+Roland is an emulator of the homecomputers Amstrad/Schneider from the series CPC 464/664/6128
 for Linux und Windows.
 Roland depends on SDL > 1.2 and SDL-Image.
-For further information visit [rolandemu.de](https://www.rolandemu.de/index.html)
+For further information visit https://www.rolandemu.de/index.html
 
 ## Build
-The source is C++11 code and needs at leat a c+11 enabled Compiler. Supported are GCC native or CygWin/MinGw. The build system
+The source is written in c++11 code and needs at leat a c++11 enabled Compiler. Supported are GCC native, Visual Studio 2015 or CygWin/MinGw. 
 
 ### Status
-[![Build Status](https://travis-ci.org/raldus/roland.svg?branch=master)](https://travis-ci.org/raldus/roland) Ubuntu32/64 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[![Build status](https://ci.appveyor.com/api/projects/status/rsa9fq8brffd5h50?svg=true)](https://ci.appveyor.com/project/raldus/roland) Windows32
+**Ubuntu 32/64**|[![Build Status](https://travis-ci.org/raldus/roland.svg?branch=master)](https://travis-ci.org/raldus/roland)
+---|--:
+**Windows 32**|[![Build status](https://ci.appveyor.com/api/projects/status/rsa9fq8brffd5h50?svg=true)](https://ci.appveyor.com/project/raldus/roland)
 
 ### General
 You will need cmake and git installed.
@@ -21,7 +22,7 @@ cd roland
 ```
 
 ### Linux
-Folowing an Example of a unix release build.
+Folowing an example of an unix release build:
 ```bash
 cmake -H. -Bbuild -G"Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
 cmake --build build
@@ -32,21 +33,21 @@ cmake --build build --target package
 ```
 
 ### Windows
-At the Moment Visual Studio 2015 32bit and MinGW are the only valid build environments.
-Following an Example with Visual Studio release build:
+At the moment Visual Studio 2015 32bit and MinGW are the only valid build environments.
+Following an example of a Visual Studio release build:
 ```bash
 cmake -H. -Bbuild -G"Visual Studio 14 2015" -DCMAKE_BUILD_TYPE=Release
 cmake --build build --config Release
 ```
 
 ### Documentation
-You will need Doxygen installed.
+You will need Doxygen installed to generate the documentation.
 ```bash
 cmake --build build --target doc
 ```
 
 ## Usage
-Taste|Funktion
+Key|Function
 -----|--------
 F2|insert disk in drive A:
 F3|insert disk in drive B:
@@ -58,10 +59,10 @@ F12|switch to fullscreen (does not work in Windows; instead set fullscreen=1 in 
 
 ### Usage of the CPC 464/664/6128
 Insert a disk, enter **cat**  **Enter** and
-you can see the directory. Enter **run "filename"**  **Enter** (mostly *.bas).
+you will see the directory. Enter **run "filename"**  **Enter** (mostly *.bas).
 
-### Example
-
+#### Example
+>
 1. press **F2**
 2. search a disk with **arrowkeys** (HarveyH.dsk) **Enter**
 3. type **cat**  **Enter**
@@ -69,8 +70,8 @@ you can see the directory. Enter **run "filename"**  **Enter** (mostly *.bas).
 5. type **run "harvey"**  **Enter**
 6. press **F5** to emulate a joystick with **arrowkeys** and **ALT**
 
-### Example 2 (Bjack1.dsk)
-
+#### Example 2 (Bjack1.dsk)
+>
 1. ...
 2. ...
 3. ...
@@ -105,3 +106,5 @@ Afterwards, put **roland-linux.cfg** renamed to **.roland** into your homedir.
 
 ## Misc
 [Changelog](https://github.com/raldus/roland/blob/master/CHANGELOG.md)
+<br><br><br>
+[ ![Ready](https://github.com/raldus/roland/blob/master/assets/img/ready.png)](https://www.rolandemu.de/index.html)
