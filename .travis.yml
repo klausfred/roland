@@ -39,7 +39,7 @@ before_script:
     - cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Release 
 
 script: 
-    - cmake --build build 
+    - cmake --build build --target package -DCPACK_GENERATOR=DEB
 
 os:
     - linux
@@ -53,7 +53,7 @@ deploy:
   on:
     tags: true
     repo: raldus/roland
-    branch: current
+    branch: master
     
 notifications:
     on_success: change
