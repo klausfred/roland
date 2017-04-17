@@ -7,6 +7,7 @@ math(EXPR CMAKE_BITS ${CMAKE_SIZEOF_VOID_P}*8)
 
 set(PACKAGE_TITLE "Roland" CACHE STRING "Package Title")
 set(PACKAGE_NAME  "roland" CACHE STRING "Package Name")
+set(PACKAGE_DEPLOY  "RPM;DEB" CACHE STRING "Package deploy")
 
 if (NOT EXISTS "${CMAKE_SOURCE_DIR}/version") 
 execute_process(COMMAND git show --tags --quiet --reverse "--pretty=format:%ad %n[view tag](https://github.com/raldus/roland/commit/%H) %n%n***%n" OUTPUT_FILE "${CMAKE_SOURCE_DIR}/CHANGELOG.md")
@@ -215,7 +216,7 @@ set(CPACK_NSIS_DISPLAY_NAME "${PACKAGE_TITLE}")
 set(CPACK_NSIS_CONTACT "development@rolandemu.de")
 
 if(UNIX)
-    set(CPACK_GENERATOR "RPM;DEB")
+    set(CPACK_GENERATOR "${PACKAGE_DEPLOY}")
 else()
     set(CPACK_GENERATOR "NSIS")
 endif()
