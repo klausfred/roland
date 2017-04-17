@@ -44,6 +44,14 @@ script:
 os:
     - linux
     
+deploy:
+  provider: releases
+  api_key: "a4ac088baa3a5b92208d4aeaa6bbd02c1d862f31"
+  file: "build/roland"
+  skip_cleanup: true
+  on:
+    tags: true
+    
 notifications:
     on_success: change
     on_failure: change
