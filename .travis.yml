@@ -39,7 +39,7 @@ before_script:
     - cmake -H. -Bbuild -DCMAKE_BUILD_TYPE=Release 
 
 script: 
-    - cmake --build build --target package -DCPACK_GENERATOR="DEB"
+    - cmake --build build --target package 
 
 os:
     - linux
